@@ -1,0 +1,61 @@
+<!--pages/detail/detail.wxml-->
+
+<!-- 头部 -->
+<view class="item-header">
+  <view class="item-title">{{detail.title}} {{detail.original_title}} ({{detail.year}})</view>
+  <view class="item-detail">
+    <view class="left-detail">
+      <view class="item-rate">
+        <stars rate="{{detail.rating?detail.rating.value:'未评分'}}" starSize="24" fontSize="24" fontColor="ccc" />
+        <text class="comment-person">{{detail.comment_count}}人评价</text>
+      </view>
+      <view class="item-sub-detail">
+        <view class="item-type">
+          {{detail.durations[0]}}分钟 {{detail.genres}}
+        </view>
+        <view class="item-show">
+          {{detail.pubdate[0]}}上映 {{detail.countries[0]}}
+        </view>
+        <view class="item-actor">
+          {{detail.authors}}
+        </view>
+      </view>
+    </view>
+
+    <view class="right-detail">
+      <image src="{{detail.cover.image.small.url}}"></image>
+    </view>
+  </view>
+</view>
+
+<!-- 标签 -->
+<view class="item-tags">
+  <view class="item-tag-title">豆瓣成员常用标签</view>
+  <view class="item-tag-list">
+    <text wx:for="{{detail.tags}}" wx:key="{{item.title}}">{{item.name}}</text>
+  </view>
+</view>
+
+<view class="comment-title">短评({{comments.total}})</view>
+<!-- 评论 -->
+<!-- <view class="comment-list-group">
+  <view class="comment-title">短评({{comments.total}})</view>
+  <view class="comment-group" wx:for="{{comments.interests}}" wx:key="{{item.id}}">
+    <view class="left-comment">
+      <image class="avatar" src="{{item.user.avatar}}"></image>
+    </view>
+    <view class="right-comment">
+      <view class="username-rate">
+        <text class="username">{{item.user.name}}</text>
+        <stars rate="{{item.rating.value*2}}" starSize="24" istext="{{false}}" />
+      </view>
+      <view class="release-time">{{item.create_time}}</view>
+      <view class="cotent">
+        {{item.comment}}
+      </view>
+    </view>
+  </view>
+</view> -->
+<oneComment comments="{{comments}}"/>
+
+<navigator class="more-comment" url="/pages/comment/comment?id={{id}}&type={{type}}&thumbnail={{detail.cover.image.small.url}}&title={{detail.title}}&rate={{detail.rating.value}}&total={{detail.comment_count}}">查看更多评论</navigator>

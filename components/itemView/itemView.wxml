@@ -1,0 +1,13 @@
+<!--components/itemView/itemView.wxml-->
+<navigator class="item-navigator" url="{{itemUrl}}">
+  <view class="item-group">
+    <view class="thumbnail-group">
+      <image 
+      class="thumbnail" 
+      src="{{item.background_url}}"
+    />
+    </view>
+    <view class="item-title">{{item.title}}</view>
+    <stars rate="{{item.rating.value}}"/>
+  </view>
+</navigator>

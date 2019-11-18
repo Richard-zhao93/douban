@@ -1,0 +1,26 @@
+<!--components/indexModule/indexModule.wxml-->
+<view class="module-group">
+  <view class="module-top">
+    <view class="module-title">{{title}}</view>
+    <navigator url="{{moreUrl}}" class="module-more">更多</navigator>
+  </view>
+  <scroll-view scroll-x="{{true}}" class="module-scroll-view">
+    <!-- <navigator 
+      wx:for="{{items}}" 
+      wx:key="{{item.title}}"
+      class="item-navigator"
+    >
+      <view class="item-group">
+        <view class="thumbnail-group">
+          <image 
+          class="thumbnail" 
+          src="{{item.background_url}}"
+        />
+        </view>
+        <view class="item-title">{{item.title}}</view>
+        <stars rate="{{item.rating.value}}"/>
+      </view>
+    </navigator> -->
+    <itemView wx:for="{{items}}" wx:key="{{item.title}}" item="{{item}}" itemUrl="/pages/detail/detail?type={{type}}&id={{item.id}}"/>
+  </scroll-view>
+</view>

@@ -1,0 +1,19 @@
+<!--components/oneComment/oneComment.wxml-->
+<view class="comment-list-group">
+  <!-- <view class="comment-title">短评({{comments.total}})</view> -->
+  <view class="comment-group" wx:for="{{comments.interests}}" wx:key="{{item.id}}">
+    <view class="left-comment">
+      <image class="avatar" src="{{item.user.avatar}}"></image>
+    </view>
+    <view class="right-comment">
+      <view class="username-rate">
+        <text class="username">{{item.user.name}}</text>
+        <stars rate="{{item.rating.value*2}}" starSize="24" istext="{{false}}" />
+      </view>
+      <view class="release-time">{{item.create_time}}</view>
+      <view class="cotent">
+        {{item.comment}}
+      </view>
+    </view>
+  </view>
+</view>

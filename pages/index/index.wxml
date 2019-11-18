@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<searchBar isNavigator="{{true}}"/>
+<indexModule title="电影" items="{{movies}}" type="movie" moreUrl="/pages/list/list?type=movie"/>
+<indexModule title="电视剧" items="{{tvs}}" type="tv" moreUrl="/pages/list/list?type=tv"/>
+<indexModule title="综艺" items="{{shows}}" type="show" moreUrl="/pages/list/list?type=show"/>

@@ -1,0 +1,52 @@
+/* pages/search/search.wxss */
+/* 搜索项目样式 */
+.item-list-group {
+  padding: 10rpx 20rpx;
+}
+
+.item-list-group .item-group {
+  border-bottom: 1px solid #E4E4E4;
+  display: flex;
+  padding: 10rpx 0;
+}
+
+.item-group .item-image {
+  width: 80rpx;
+  height: 100rpx;
+}
+
+.info-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20rpx;
+}
+
+.info-group ,title {
+  font-size: 32rpx;
+}
+
+.info-group .rate-year {
+  color: #7b7b7b;
+  font-size: 28rpx;
+}
+
+/* 历史记录样式 */
+.history-list-group {
+  padding: 10rpx 20rpx;
+}
+
+.history-list-group .history-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  padding: 20rpx 0;
+  font-size: 28rpx;
+  color: #9e9e9e;
+}
+
+.history-list-group .history-group {
+  border-bottom: 1px solid #E4E4E4;
+  padding: 20rpx 0;
+}

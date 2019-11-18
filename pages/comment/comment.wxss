@@ -1,0 +1,48 @@
+/* pages/comment/comment.wxss */
+/* 头部电影信息部分 */
+.container {
+  padding: 20rpx 0 0 30rpx;
+}
+
+.item-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 80rpx;
+}
+.item-group .thumbnail {
+  width: 40rpx;
+  height: 50rpx;
+}
+.item-group .item-title {
+  margin: 0 20rpx;
+  color: #41be57;
+}
+
+.item-group .item-rate {
+  color: #b3b3b3;
+  font-size: 30rpx;
+}
+
+/* 影评部分 */
+
+.comment-group .comment-title {
+  font-size: 36rpx;
+}
+
+/* 按钮样式 */
+.page-btn-group {
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.page-btn {
+  flex: 1;
+  height: 60rpx;
+  color: #898989;
+  border-color: #898989;
+  line-height: 60rpx;
+}

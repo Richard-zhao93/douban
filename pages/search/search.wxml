@@ -1,0 +1,22 @@
+<!--pages/search/search.wxml-->
+<searchBar isNavigator="{{false}}" bindsearchInput="onSearchInputEvent"/>
+
+<!-- 历史记录显示 -->
+<view class="history-list-group" wx:if="{{histories.length&&!searchData.length}}">
+  <view class="history-title"  >
+    <view class="title">历史记录</view>
+    <view class="clear" bindtap="onClearEvent">清除</view>
+  </view>
+  <navigator class="history-group" url='/pages/detail/detail?type=movie&id={{item.id}}' wx:for="{{histories}}" wx:key="{{item.id}}">{{item.title}}</navigator>
+</view>
+
+<!-- 搜索项目显示 -->
+<view class="item-list-group" wx:if="{{searchData}}">
+  <view class="item-group" wx:for="{{searchData}}" wx:key="{{item.title}}" bindtap="onItemTapEvent" data-id="{{item.id}}" data-title="{{item.title}}">
+    <image class="item-image" src="{{item.pic.normal}}"></image>
+    <view class="info-group">
+      <view class="title">{{item.title}}</view>
+      <view class="rate-year">{{item.rating?item.rating.value:"未评分"}} / {{item.year}}</view>
+    </view>
+  </view>
+</view>

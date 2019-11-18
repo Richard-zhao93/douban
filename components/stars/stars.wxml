@@ -1,0 +1,25 @@
+<!--components/starts/starts.wxml-->
+<view class="rate-group">
+  <image 
+    wx:for="{{lights}}"
+    wx:key="*this"
+    src="/images/rate_light.png"
+    style='width:{{starSize}}rpx;height:{{starSize}}rpx;'
+  />
+  <image
+   wx:for="{{halfs}}"
+   wx:key="*this"
+   src="/images/rate_half.png"
+   style='width:{{starSize}}rpx;height:{{starSize}}rpx;'
+  />
+  <image 
+    wx:for="{{grays}}"
+    wx:key="*this"
+    src="/images/rate_gray.png"
+    style='width:{{starSize}}rpx;height:{{starSize}}rpx;'
+  />
+  <text 
+    style='font-size:{{fontSize}}rpx;color:{{fontColor}};'
+    wx:if="{{istext}}"
+  >{{rateText}}</text>
+</view>
